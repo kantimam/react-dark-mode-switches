@@ -4,7 +4,7 @@
   "description": "fancy checkbox to do whatever but styled as dark mode switch",
   "author": "https://github.com/kantimam",
   "license": "MIT",
-  "homepage": "http://kantimam.github.io/react-autosuggest-input/",
+  "homepage": "http://github.com/kantimam.github.io/react-dark-mode-switch",
   "repository": "https://github.com/kantimam/react-dark-mode-switches",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
