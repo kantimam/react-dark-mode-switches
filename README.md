@@ -13,14 +13,33 @@ npm install --save react-dark-mode-switch
 ## Usage
 
 ```tsx
-import * as React from 'react'
+import React, { Component } from 'react'
+import DarkModeToggle from 'react-dark-mode-switch'
+const darkModeClass="darkMode"
 
-import MyComponent from 'react-dark-mode-switch'
+export default class App extends Component {
+    state = {
+    darkMode: false
+  }
 
-class Example extends React.Component {
-  render () {
+  toggleChecked = (event) => {
+    this.setState({ darkMode: event.target.checked });
+  }
+  render() {
     return (
-      <MyComponent />
+      <div className={`App ${this.state.darkMode? darkModeClass: ""}`}>
+        DARK MODE TEST
+        <DarkModeToggle
+          /* required */
+          toggleChecked={this.toggleChecked}
+          isChecked={this.state.darkMode} 
+          /* optional working default values are provided */
+          darkLabel="dark" 
+          lightLabel="light" 
+          activeClass="darkActive"
+          id="darkModeToggle" 
+        />
+      </div>
     )
   }
 }
