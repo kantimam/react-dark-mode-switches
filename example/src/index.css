@@ -1,5 +1,39 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+
+}
+
+.App{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  --bgColor: rgb(233, 233, 233);
+  --mainFontColor: black;
+
+  --secColor: rgba(65, 52, 52, 0.3);
+}
+
+.App.darkMode{
+  --bgColor: rgb(65, 65, 65);
+  --mainFontColor: rgb(223, 223, 223);
+
+  --secColor: rgba(197, 197, 197, 0.3);
+
+}
+
+.App{
+  background-color: var(--bgColor);
+  color: var(--mainFontColor);
+}
+#darkModeToggle{
+  background-color: var(--bgColor);
+  margin: 4rem;
+}
+
+#darkModeToggle .switchHandle{
+  background-color: var(--secColor);
 }

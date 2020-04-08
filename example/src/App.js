@@ -1,12 +1,27 @@
 import React, { Component } from 'react'
-
-import ExampleComponent from 'react-dark-mode-switch'
+import DarkModeToggle from 'react-dark-mode-switch'
+const darkModeClass="darkMode"
 
 export default class App extends Component {
-  render () {
+    state = {
+    darkMode: false
+  }
+
+  toggleChecked = (event) => {
+    this.setState({ darkMode: event.target.checked });
+  }
+  render() {
     return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
+      <div className={`App ${this.state.darkMode? darkModeClass: ""}`}>
+        DARK MODE TEST
+        <DarkModeToggle
+          toggleChecked={this.toggleChecked}
+          isChecked={this.state.darkMode} 
+          darkLabel="dark" 
+          lightLabel="light" 
+          activeClass="darkActive"
+          id="darkModeToggle" 
+        />
       </div>
     )
   }

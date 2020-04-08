@@ -1,8 +1,43 @@
-/* add css styles here (optional) */
-
-.test {
+.darkModeToggle {
+  box-sizing: border-box;
+  border: 1px solid black;
   display: inline-block;
-  margin: 2em auto;
-  border: 2px solid #000;
-  font-size: 2em;
+  height: 1.8rem;
+  width: 7rem;
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  transition: color 0.6 ease-in-out;
+}
+.darkModeToggle::before{
+  content: attr(data-dark-label);
+  width: 50%;
+  text-align: center;
+}
+.darkModeToggle::after{
+  content: attr(data-light-label);
+  width: 50%;
+  text-align: center;
+}
+
+.darkModeToggle input {
+  display: none;
+}
+
+.darkModeToggle .switchHandle {
+  box-sizing: border-box;
+  border-radius: 2rem;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transition: 0.4s;
+  background-color: rgba(114, 114, 114, 0.26);
+}
+
+#DMT_Input:checked + .switchHandle{
+  left: 0;
 }
