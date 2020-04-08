@@ -21,7 +21,7 @@ export default class DarkToggle extends React.Component<Props> {
     const { 
       id="", 
       className="", 
-      activeClass="", 
+      activeClass="DMT_Active", 
       lightLabel="light", 
       darkLabel="dark", 
       isChecked, 

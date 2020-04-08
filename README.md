@@ -10,6 +10,9 @@
 npm install --save react-dark-mode-switch
 ```
 
+## Default look
+![Farmers Market Finder Demo](darkMode.gif)
+
 ## Usage
 
 ```tsx
@@ -44,6 +47,22 @@ export default class App extends Component {
   }
 }
 ```
+
+
+## Props
+
+| Prop          | Type     | Required | Description                                                                                                                              |
+|:--------------|:---------|:--------:|:-----------------------------------------------------------------------------------------------------------------------------------------|
+| isChecked     | Boolean  |    ✓     | Value of checkbox                                                                                                                        |
+| toggleChecked | Function |    ✓     | Function to change isChecked. Does actually get you the event value event.target.checked                                                 |
+| id            | String   |          | Pass your own id to the container. Preferably use this to apply your own styles since it overwrites the intern styles without !important |
+| className     | String   |          | Pass your own className to the wrapper                                                                                                   |
+| activeClass   | String   |          | ClassName that gets added to the container when isChecked is true (default "DMT_Active")                                                 |
+| className     | String   |          | Can be used to add your own className to parent component                                                                                |
+| darkLabel     | String   |          | String that gets displayed in the left half of the container (default "dark")                                                            |
+| lightLabel    | String   |          | String that gets displayed in the right half of the container (default "light")                                                          |
+
+
 
 ## License
 

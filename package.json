@@ -1,10 +1,10 @@
 {
   "name": "react-dark-mode-switch",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "fancy checkbox to do whatever but styled as dark mode switch",
   "author": "https://github.com/kantimam",
   "license": "MIT",
-  "homepage": "http://github.com/kantimam.github.io/react-dark-mode-switch",
+  "homepage": "http://kantimam.github.io/react-dark-mode-switches/",
   "repository": "https://github.com/kantimam/react-dark-mode-switches",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
